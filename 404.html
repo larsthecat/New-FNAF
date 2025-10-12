@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page Not Found</title>
+  <style>
+    /* ****** Replace the background image below with your own Five Nights At Freddy's image ******
+       Example: background-image: url('<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page Not Found</title>
+  <style>
+    /* ****** Replace the background image below with your own Five Nights At Freddy's image ******
+       Example: background-image: url('<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Page Not Found</title>
+  <style>
+    /* ****** Replace the background image below with your own Five Nights At Freddy's image ******
+       Example: background-image: url('https://example.com/your-fnaf-image.jpg');
+       Or put file fnaf-bg.jpg in same folder as this HTML file.
+    */
+    :root{
+      --accent: #ff5b2e;
+      --glow: rgba(255,91,46,0.18);
+      --dark: #070707;
+      --muted: rgba(255,255,255,0.06);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      background:var(--dark);
+      color:#fff;
+    }
+
+    /* Background image + layered effects */
+    .bg {
+      position:fixed;
+      inset:0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+        url('fnaf-bg.jpg'); /* <-- REPLACE this with your FNAF image path or URL */
+      background-size:cover;
+      background-position:center;
+      filter:contrast(1.05) saturate(1.05);
+      z-index:0;
+    }
+
+    /* subtle animated vignette */
+    .vignette {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(0,0,0,0.65) 100%);
+      mix-blend-mode:multiply;
+      z-index:1;
+      animation: pulseV 6s infinite;
+    }
+    @keyframes pulseV {
+      0% { opacity:0.9; }
+      50% { opacity:0.78; }
+      100% { opacity:0.9; }
+    }
+
+    /* camera scanline + noise */
+    .scanlines {
+      position:fixed;
+      inset:0;
+      background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 100% 3px;
+      z-index:2;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+      animation: scan 8s linear infinite;
+      opacity:0.7;
+    }
+    @keyframes scan {
+      from { background-position-y: 0; }
+      to { background-position-y: 3000px; }
+    }
+
+    .grain {
+      position:fixed; inset:0; z-index:3; pointer-events:none;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" seed="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04" /></svg>');
+      opacity:0.7;
+      mix-blend-mode:overlay;
+    }
+
+    /* Main card */
+    .wrap{
+      position:relative;
+      z-index:4;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card {
+      width:min(960px, 92%);
+      background: linear-gradient(180deg, rgba(10,10,10,0.55), rgba(0,0,0,0.6));
+      border-radius:14px;
+      padding:36px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 60px var(--glow);
+      backdrop-filter: blur(6px) saturate(1.1);
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* Left: big message */
+    .left {
+      padding:12px 18px;
+    }
+
+    .code {
+      font-size:64px;
+      line-height:1;
+      letter-spacing:4px;
+      margin:0 0 10px 0;
+      font-weight:900;
+      color: #ffd6c6;
+      text-shadow:
+        0 0 12px rgba(255,140,90,0.14),
+        0 0 28px rgba(255,80,30,0.09);
+      transform: translateZ(0);
+      animation: flicker 6s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity:1; text-shadow: 0 0 18px rgba(255,110,60,0.16); }
+      7% { opacity:0.85; text-shadow: none; }
+      10% { opacity:0.95; }
+      15% { opacity:1; text-shadow: 0 0 24px rgba(255,110,60,0.18); }
+      100% { opacity:1; }
+    }
+
+    .title {
+      font-size:20px;
+      margin:4px 0 18px 0;
+      color:#fff8f2;
+      font-weight:600;
+    }
+
+    .desc {
+      color: rgba(255,255,255,0.78);
+      margin:0 0 18px 0;
+      line-height:1.5;
+    }
+
+    /* Right: animatronic silhouette panel */
+    .right {
+      height:220px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.62));
+      border-radius:10px;
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* stylized animatronic eyes made with CSS as decorative element */
+    .eyes {
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+      transform: translateY(-6px);
+    }
+    .eye {
+      width:44px; height:44px; border-radius:50%;
+      background: radial-gradient(circle at 38% 30%, #fff 5%, #ffd3c8 12%, #ff4f2d 40%, #3a0202 62%);
+      box-shadow: 0 0 18px rgba(255,80,40,0.45), inset 0 -6px 14px rgba(0,0,0,0.4);
+      animation: eyeBlink 6s infinite;
+      position:relative;
+    }
+    .eye::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:50%;
+      box-shadow: inset 0 0 18px rgba(0,0,0,0.45);
+    }
+    @keyframes eyeBlink{
+      0% { transform: scale(1); }
+      6% { transform: scaleY(0.06) translateY(6px); }
+      10% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    .right p {
+      margin:0;
+      font-size:13px;
+      color:rgba(255,255,255,0.8);
+      text-align:center;
+      max-width:260px;
+    }
+
+    /* Buttons */
+    .actions {
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      cursor:pointer;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition: transform .14s ease, box-shadow .12s ease;
+      user-select:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+    .btn:active { transform:translateY(2px) scale(.998); }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
+
+    .btn.primary {
+      background: linear-gradient(90deg, rgba(255,90,40,0.12), rgba(255,50,20,0.08));
+      border:1px solid rgba(255,90,40,0.18);
+      box-shadow: 0 12px 40px rgba(255,80,40,0.04);
+    }
+
+    .btn.ghost {
+      background:transparent;
+      border:1px dashed rgba(255,255,255,0.06);
+    }
+
+    /* small footer */
+    .note {
+      margin-top:12px;
+      font-size:12px;
+      color:rgba(255,255,255,0.5);
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card { grid-template-columns: 1fr; padding:22px; gap:14px; }
+      .right { height:auto; padding:18px 12px; }
+      .code { font-size:48px; text-align:center; }
+      .title { text-align:center; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="wrap" role="main">
+    <section class="card" role="region" aria-labelledby="errtitle">
+      <div class="left">
+        <h1 class="code" id="errcode">404</h1>
+        <div class="title" id="errtitle">Page Not Found — Night Shift Active</div>
+        <p class="desc">Looks like you wandered into a closed part of the pizzeria. The page you requested couldn't be found.
+           Perhaps it moved... or maybe something else is prowling in the vents.</p>
+
+        <div class="actions" aria-hidden="false">
+          <a class="btn primary" href="/" id="homeBtn" title="Go back to home">
+            <!-- SVG home icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 21V12h14v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Return Home
+          </a>
+
+          <button class="btn ghost" id="retryBtn" title="Try again (reload)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M21 12a9 9 0 1 0-3.36 6.36L21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 3v6h-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Retry
+          </button>
+
+          <button class="btn ghost" id="fullBtn" title="Toggle full screen">
+            ⤢ Fullscreen
+          </button>
+        </div>
+
+        <div class="note">Tip: replace <code>fnaf-bg.jpg</code> in the CSS with your own FNAF background image.</div>
+      </div>
+
+      <aside class="right" aria-hidden="false">
+        <div class="eyes" aria-hidden="true">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <p>System: Night shift camera offline.<br/>Animatronics are roaming — proceed with caution.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    // Retry button reloads the page
+    document.getElementById('retryBtn').addEventListener('click', function(){
+      // small visual feedback
+      this.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-6px)' }, { transform: 'translateY(0)' }], { duration: 380 });
+      setTimeout(()=> location.reload(), 280);
+    });
+
+    // Fullscreen toggle
+    const fullBtn = document.getElementById('fullBtn');
+    fullBtn.addEventListener('click', async () => {
+      if (!document.fullscreenElement) {
+        try {
+          await document.documentElement.requestFullscreen();
+        } catch(e) {
+          alert('Fullscreen not supported or blocked.');
+        }
+      } else {
+        await document.exitFullscreen();
+      }
+    });
+
+    // Optional: show a quick creepy sound (commented out).
+    // If you want ambient FNAF audio, uncomment the following lines and replace 'ambient.mp3' with your audio file.
+    /*
+    const audio = new Audio('ambient.mp3');
+    audio.loop = true;
+    audio.volume = 0.16;
+    // autoplay may be blocked by browsers; user interaction will allow play
+    document.addEventListener('click', () => audio.play(), { once: true });
+    */
+
+    // Accessibility: allow Enter key to activate buttons when focused
+    document.querySelectorAll('.btn, button').forEach(el => {
+      el.addEventListener('keyup', e => { if (e.key === 'Enter') el.click(); });
+    });
+  </script>
+</body>
+</html>
+');
+       Or put file fnaf-bg.jpg in same folder as this HTML file.
+    */
+    :root{
+      --accent: #ff5b2e;
+      --glow: rgba(255,91,46,0.18);
+      --dark: #070707;
+      --muted: rgba(255,255,255,0.06);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      background:var(--dark);
+      color:#fff;
+    }
+
+    /* Background image + layered effects */
+    .bg {
+      position:fixed;
+      inset:0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+        url('fnaf-bg.jpg'); /* <-- REPLACE this with your FNAF image path or URL */
+      background-size:cover;
+      background-position:center;
+      filter:contrast(1.05) saturate(1.05);
+      z-index:0;
+    }
+
+    /* subtle animated vignette */
+    .vignette {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(0,0,0,0.65) 100%);
+      mix-blend-mode:multiply;
+      z-index:1;
+      animation: pulseV 6s infinite;
+    }
+    @keyframes pulseV {
+      0% { opacity:0.9; }
+      50% { opacity:0.78; }
+      100% { opacity:0.9; }
+    }
+
+    /* camera scanline + noise */
+    .scanlines {
+      position:fixed;
+      inset:0;
+      background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 100% 3px;
+      z-index:2;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+      animation: scan 8s linear infinite;
+      opacity:0.7;
+    }
+    @keyframes scan {
+      from { background-position-y: 0; }
+      to { background-position-y: 3000px; }
+    }
+
+    .grain {
+      position:fixed; inset:0; z-index:3; pointer-events:none;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" seed="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04" /></svg>');
+      opacity:0.7;
+      mix-blend-mode:overlay;
+    }
+
+    /* Main card */
+    .wrap{
+      position:relative;
+      z-index:4;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card {
+      width:min(960px, 92%);
+      background: linear-gradient(180deg, rgba(10,10,10,0.55), rgba(0,0,0,0.6));
+      border-radius:14px;
+      padding:36px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 60px var(--glow);
+      backdrop-filter: blur(6px) saturate(1.1);
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* Left: big message */
+    .left {
+      padding:12px 18px;
+    }
+
+    .code {
+      font-size:64px;
+      line-height:1;
+      letter-spacing:4px;
+      margin:0 0 10px 0;
+      font-weight:900;
+      color: #ffd6c6;
+      text-shadow:
+        0 0 12px rgba(255,140,90,0.14),
+        0 0 28px rgba(255,80,30,0.09);
+      transform: translateZ(0);
+      animation: flicker 6s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity:1; text-shadow: 0 0 18px rgba(255,110,60,0.16); }
+      7% { opacity:0.85; text-shadow: none; }
+      10% { opacity:0.95; }
+      15% { opacity:1; text-shadow: 0 0 24px rgba(255,110,60,0.18); }
+      100% { opacity:1; }
+    }
+
+    .title {
+      font-size:20px;
+      margin:4px 0 18px 0;
+      color:#fff8f2;
+      font-weight:600;
+    }
+
+    .desc {
+      color: rgba(255,255,255,0.78);
+      margin:0 0 18px 0;
+      line-height:1.5;
+    }
+
+    /* Right: animatronic silhouette panel */
+    .right {
+      height:220px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.62));
+      border-radius:10px;
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* stylized animatronic eyes made with CSS as decorative element */
+    .eyes {
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+      transform: translateY(-6px);
+    }
+    .eye {
+      width:44px; height:44px; border-radius:50%;
+      background: radial-gradient(circle at 38% 30%, #fff 5%, #ffd3c8 12%, #ff4f2d 40%, #3a0202 62%);
+      box-shadow: 0 0 18px rgba(255,80,40,0.45), inset 0 -6px 14px rgba(0,0,0,0.4);
+      animation: eyeBlink 6s infinite;
+      position:relative;
+    }
+    .eye::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:50%;
+      box-shadow: inset 0 0 18px rgba(0,0,0,0.45);
+    }
+    @keyframes eyeBlink{
+      0% { transform: scale(1); }
+      6% { transform: scaleY(0.06) translateY(6px); }
+      10% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    .right p {
+      margin:0;
+      font-size:13px;
+      color:rgba(255,255,255,0.8);
+      text-align:center;
+      max-width:260px;
+    }
+
+    /* Buttons */
+    .actions {
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      cursor:pointer;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition: transform .14s ease, box-shadow .12s ease;
+      user-select:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+    .btn:active { transform:translateY(2px) scale(.998); }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
+
+    .btn.primary {
+      background: linear-gradient(90deg, rgba(255,90,40,0.12), rgba(255,50,20,0.08));
+      border:1px solid rgba(255,90,40,0.18);
+      box-shadow: 0 12px 40px rgba(255,80,40,0.04);
+    }
+
+    .btn.ghost {
+      background:transparent;
+      border:1px dashed rgba(255,255,255,0.06);
+    }
+
+    /* small footer */
+    .note {
+      margin-top:12px;
+      font-size:12px;
+      color:rgba(255,255,255,0.5);
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card { grid-template-columns: 1fr; padding:22px; gap:14px; }
+      .right { height:auto; padding:18px 12px; }
+      .code { font-size:48px; text-align:center; }
+      .title { text-align:center; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="wrap" role="main">
+    <section class="card" role="region" aria-labelledby="errtitle">
+      <div class="left">
+        <h1 class="code" id="errcode">404</h1>
+        <div class="title" id="errtitle">Page Not Found — Night Shift Active</div>
+        <p class="desc">Looks like you wandered into a closed part of the pizzeria. The page you requested couldn't be found.
+           Perhaps it moved... or maybe something else is prowling in the vents.</p>
+
+        <div class="actions" aria-hidden="false">
+          <a class="btn primary" href="/" id="homeBtn" title="Go back to home">
+            <!-- SVG home icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 21V12h14v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Return Home
+          </a>
+
+          <button class="btn ghost" id="retryBtn" title="Try again (reload)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M21 12a9 9 0 1 0-3.36 6.36L21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 3v6h-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Retry
+          </button>
+
+          <button class="btn ghost" id="fullBtn" title="Toggle full screen">
+            ⤢ Fullscreen
+          </button>
+        </div>
+
+        <div class="note">Tip: replace <code>fnaf-bg.jpg</code> in the CSS with your own FNAF background image.</div>
+      </div>
+
+      <aside class="right" aria-hidden="false">
+        <div class="eyes" aria-hidden="true">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <p>System: Night shift camera offline.<br/>Animatronics are roaming — proceed with caution.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    // Retry button reloads the page
+    document.getElementById('retryBtn').addEventListener('click', function(){
+      // small visual feedback
+      this.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-6px)' }, { transform: 'translateY(0)' }], { duration: 380 });
+      setTimeout(()=> location.reload(), 280);
+    });
+
+    // Fullscreen toggle
+    const fullBtn = document.getElementById('fullBtn');
+    fullBtn.addEventListener('click', async () => {
+      if (!document.fullscreenElement) {
+        try {
+          await document.documentElement.requestFullscreen();
+        } catch(e) {
+          alert('Fullscreen not supported or blocked.');
+        }
+      } else {
+        await document.exitFullscreen();
+      }
+    });
+
+    // Optional: show a quick creepy sound (commented out).
+    // If you want ambient FNAF audio, uncomment the following lines and replace 'ambient.mp3' with your audio file.
+    /*
+    const audio = new Audio('ambient.mp3');
+    audio.loop = true;
+    audio.volume = 0.16;
+    // autoplay may be blocked by browsers; user interaction will allow play
+    document.addEventListener('click', () => audio.play(), { once: true });
+    */
+
+    // Accessibility: allow Enter key to activate buttons when focused
+    document.querySelectorAll('.btn, button').forEach(el => {
+      el.addEventListener('keyup', e => { if (e.key === 'Enter') el.click(); });
+    });
+  </script>
+</body>
+</html>
+');
+       Or put file fnaf-bg.jpg in same folder as this HTML file.
+    */
+    :root{
+      --accent: #ff5b2e;
+      --glow: rgba(255,91,46,0.18);
+      --dark: #070707;
+      --muted: rgba(255,255,255,0.06);
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      background:var(--dark);
+      color:#fff;
+    }
+
+    /* Background image + layered effects */
+    .bg {
+      position:fixed;
+      inset:0;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
+        url('fnaf-bg.jpg'); /* <-- REPLACE this with your FNAF image path or URL */
+      background-size:cover;
+      background-position:center;
+      filter:contrast(1.05) saturate(1.05);
+      z-index:0;
+    }
+
+    /* subtle animated vignette */
+    .vignette {
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 35%, rgba(0,0,0,0.65) 100%);
+      mix-blend-mode:multiply;
+      z-index:1;
+      animation: pulseV 6s infinite;
+    }
+    @keyframes pulseV {
+      0% { opacity:0.9; }
+      50% { opacity:0.78; }
+      100% { opacity:0.9; }
+    }
+
+    /* camera scanline + noise */
+    .scanlines {
+      position:fixed;
+      inset:0;
+      background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 100% 3px;
+      z-index:2;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+      animation: scan 8s linear infinite;
+      opacity:0.7;
+    }
+    @keyframes scan {
+      from { background-position-y: 0; }
+      to { background-position-y: 3000px; }
+    }
+
+    .grain {
+      position:fixed; inset:0; z-index:3; pointer-events:none;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" seed="2"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04" /></svg>');
+      opacity:0.7;
+      mix-blend-mode:overlay;
+    }
+
+    /* Main card */
+    .wrap{
+      position:relative;
+      z-index:4;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card {
+      width:min(960px, 92%);
+      background: linear-gradient(180deg, rgba(10,10,10,0.55), rgba(0,0,0,0.6));
+      border-radius:14px;
+      padding:36px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 60px var(--glow);
+      backdrop-filter: blur(6px) saturate(1.1);
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:center;
+    }
+
+    /* Left: big message */
+    .left {
+      padding:12px 18px;
+    }
+
+    .code {
+      font-size:64px;
+      line-height:1;
+      letter-spacing:4px;
+      margin:0 0 10px 0;
+      font-weight:900;
+      color: #ffd6c6;
+      text-shadow:
+        0 0 12px rgba(255,140,90,0.14),
+        0 0 28px rgba(255,80,30,0.09);
+      transform: translateZ(0);
+      animation: flicker 6s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity:1; text-shadow: 0 0 18px rgba(255,110,60,0.16); }
+      7% { opacity:0.85; text-shadow: none; }
+      10% { opacity:0.95; }
+      15% { opacity:1; text-shadow: 0 0 24px rgba(255,110,60,0.18); }
+      100% { opacity:1; }
+    }
+
+    .title {
+      font-size:20px;
+      margin:4px 0 18px 0;
+      color:#fff8f2;
+      font-weight:600;
+    }
+
+    .desc {
+      color: rgba(255,255,255,0.78);
+      margin:0 0 18px 0;
+      line-height:1.5;
+    }
+
+    /* Right: animatronic silhouette panel */
+    .right {
+      height:220px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.62));
+      border-radius:10px;
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* stylized animatronic eyes made with CSS as decorative element */
+    .eyes {
+      display:flex;
+      gap:28px;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:14px;
+      transform: translateY(-6px);
+    }
+    .eye {
+      width:44px; height:44px; border-radius:50%;
+      background: radial-gradient(circle at 38% 30%, #fff 5%, #ffd3c8 12%, #ff4f2d 40%, #3a0202 62%);
+      box-shadow: 0 0 18px rgba(255,80,40,0.45), inset 0 -6px 14px rgba(0,0,0,0.4);
+      animation: eyeBlink 6s infinite;
+      position:relative;
+    }
+    .eye::after {
+      content:"";
+      position:absolute;
+      inset:0;
+      border-radius:50%;
+      box-shadow: inset 0 0 18px rgba(0,0,0,0.45);
+    }
+    @keyframes eyeBlink{
+      0% { transform: scale(1); }
+      6% { transform: scaleY(0.06) translateY(6px); }
+      10% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    .right p {
+      margin:0;
+      font-size:13px;
+      color:rgba(255,255,255,0.8);
+      text-align:center;
+      max-width:260px;
+    }
+
+    /* Buttons */
+    .actions {
+      margin-top:18px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+      cursor:pointer;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition: transform .14s ease, box-shadow .12s ease;
+      user-select:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+    .btn:active { transform:translateY(2px) scale(.998); }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
+
+    .btn.primary {
+      background: linear-gradient(90deg, rgba(255,90,40,0.12), rgba(255,50,20,0.08));
+      border:1px solid rgba(255,90,40,0.18);
+      box-shadow: 0 12px 40px rgba(255,80,40,0.04);
+    }
+
+    .btn.ghost {
+      background:transparent;
+      border:1px dashed rgba(255,255,255,0.06);
+    }
+
+    /* small footer */
+    .note {
+      margin-top:12px;
+      font-size:12px;
+      color:rgba(255,255,255,0.5);
+    }
+
+    /* responsive */
+    @media (max-width:880px){
+      .card { grid-template-columns: 1fr; padding:22px; gap:14px; }
+      .right { height:auto; padding:18px 12px; }
+      .code { font-size:48px; text-align:center; }
+      .title { text-align:center; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="wrap" role="main">
+    <section class="card" role="region" aria-labelledby="errtitle">
+      <div class="left">
+        <h1 class="code" id="errcode">404</h1>
+        <div class="title" id="errtitle">Page Not Found — Night Shift Active</div>
+        <p class="desc">Looks like you wandered into a closed part of the pizzeria. The page you requested couldn't be found.
+           Perhaps it moved... or maybe something else is prowling in the vents.</p>
+
+        <div class="actions" aria-hidden="false">
+          <a class="btn primary" href="/" id="homeBtn" title="Go back to home">
+            <!-- SVG home icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 21V12h14v9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Return Home
+          </a>
+
+          <button class="btn ghost" id="retryBtn" title="Try again (reload)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M21 12a9 9 0 1 0-3.36 6.36L21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 3v6h-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Retry
+          </button>
+
+          <button class="btn ghost" id="fullBtn" title="Toggle full screen">
+            ⤢ Fullscreen
+          </button>
+        </div>
+
+        <div class="note">Tip: replace <code>fnaf-bg.jpg</code> in the CSS with your own FNAF background image.</div>
+      </div>
+
+      <aside class="right" aria-hidden="false">
+        <div class="eyes" aria-hidden="true">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <p>System: Night shift camera offline.<br/>Animatronics are roaming — proceed with caution.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    // Retry button reloads the page
+    document.getElementById('retryBtn').addEventListener('click', function(){
+      // small visual feedback
+      this.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(-6px)' }, { transform: 'translateY(0)' }], { duration: 380 });
+      setTimeout(()=> location.reload(), 280);
+    });
+
+    // Fullscreen toggle
+    const fullBtn = document.getElementById('fullBtn');
+    fullBtn.addEventListener('click', async () => {
+      if (!document.fullscreenElement) {
+        try {
+          await document.documentElement.requestFullscreen();
+        } catch(e) {
+          alert('Fullscreen not supported or blocked.');
+        }
+      } else {
+        await document.exitFullscreen();
+      }
+    });
+
+    // Optional: show a quick creepy sound (commented out).
+    // If you want ambient FNAF audio, uncomment the following lines and replace 'ambient.mp3' with your audio file.
+    /*
+    const audio = new Audio('ambient.mp3');
+    audio.loop = true;
+    audio.volume = 0.16;
+    // autoplay may be blocked by browsers; user interaction will allow play
+    document.addEventListener('click', () => audio.play(), { once: true });
+    */
+
+    // Accessibility: allow Enter key to activate buttons when focused
+    document.querySelectorAll('.btn, button').forEach(el => {
+      el.addEventListener('keyup', e => { if (e.key === 'Enter') el.click(); });
+    });
+  </script>
+</body>
+</html>
