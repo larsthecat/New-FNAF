@@ -45,7 +45,25 @@ Omri Petitte from PC Gamer gave Five Nights at Freddy's a score of 80 out of 100
 Eurogamer's Jeffrey Matulef compared the animatronic animals in the game to Weeping Angels — predatory creatures from the universe of Doctor Who — due to their ability to only move when they are not being observed. Softpedia gave the game 4 out of 5 stars, with reviewer Cosmin Anton noting that it "drifts away from the classic first-person horror survival titles", but that the "inability to move combined with the limited power available will make you feel quite helpless in front of those relentless robots that just want to share a bit of their 'love' with you".
 
 
+Main series games:
+-------------------------------------------------------------------------------------------
+Five Nights at Freddy's (2014): The first game, where players are a night guard at Freddy Fazbear's Pizza and must survive five nights by monitoring cameras and managing power to prevent the animatronics from entering their office.
 
+Five Nights at Freddy's 2 (2014): This sequel introduces new animatronics and mechanics, as the pizzeria has reopened with a new, more modern look.
+
+Five Nights at Freddy's 3 (2015): Set 30 years after the original, this game takes place in a horror attraction based on the legend of Freddy Fazbear's Pizza.
+
+Five Nights at Freddy's 4 (2015): Features a different gameplay style, with players taking on the role of a child in a bedroom who must defend themselves from nightmare versions of the animatronics by listening for them and using a flashlight.
+
+Five Nights at Freddy's: Sister Location (2016): A departure from the usual formula, this game has the player working in a different location with a more story-heavy narrative and different animatronics.
+
+Freddy Fazbear's Pizzeria Simulator (2017): A surprisingly deep game that starts as a pizza restaurant simulator and evolves into a survival horror experience.
+
+Five Nights at Freddy's: Help Wanted (2019): A VR game where players test their skills in a series of mini-games based on past incidents, all while being hunted by new threats.
+
+Five Nights at Freddy's: Security Breach (2021): A major expansion to the series, this game features a much larger environment to explore as players try to escape the Freddy Fazbear Mega Pizzaplex.
+
+Help Wanted 2 (2023): The sequel to Help Wanted, it also takes place in virtual reality and presents a new set of terrifying challenges for the player. 
 
 
 
