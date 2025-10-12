@@ -32,7 +32,7 @@ The player sits in an office and monitors security cameras positioned throughout
 
 The player must use the camera feeds to locate all four animatronics in the building, and hold them off using the doors. If the player fails to do this, they will be killed with a jumpscare. To advance to the next night, the player must survive from 12:00 AM until 6:00 AM.
 
-Animatronics:
+Animatronics: <br>
 Freddy Fazbear [INFO](https://fivenightsatfreddys.fandom.com/wiki/Freddy_Fazbear)<br>
 Bonnie [INFO](https://fivenightsatfreddys.fandom.com/wiki/Bonnie)<br>
 Chica [INFO](https://fivenightsatfreddys.fandom.com/wiki/Chica)<br>
