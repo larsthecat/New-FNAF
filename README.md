@@ -66,6 +66,22 @@ Five Nights at Freddy's: Security Breach (2021): A major expansion to the series
 Help Wanted 2 (2023): The sequel to Help Wanted, it also takes place in virtual reality and presents a new set of terrifying challenges for the player. 
 
 # Pages
+[Home](https://larsthecat.github.io/New-FNAF/)<br>
+[DLCs Info](https://larsthecat.github.io/New-FNAF/DLCs-Info)<br>
+[DLCs Packages](https://larsthecat.github.io/New-FNAF/DLCs-Packages)<br>
+[DLCs Depots](https://larsthecat.github.io/New-FNAF/DLCs-Depots)<br>
+[DLCs Specials](https://larsthecat.github.io/New-FNAF/DLCs-Specials)<br>
+[DLCs / Mods](https://larsthecat.github.io/New-FNAF/Mods)<br>
+[DLCs / Pro](https://larsthecat.github.io/New-FNAF/Pro)<br>
+[Info](https://larsthecat.github.io/New-FNAF/Info)<br>
+
+
+
+
+
+
+
+
 
 
 
