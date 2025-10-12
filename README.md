@@ -74,6 +74,17 @@ Help Wanted 2 (2023): The sequel to Help Wanted, it also takes place in virtual 
 [DLCs / Mods](https://larsthecat.github.io/New-FNAF/Mods)<br>
 [DLCs / Pro](https://larsthecat.github.io/New-FNAF/Pro)<br>
 [DLCs / API](https://larsthecat.github.io/New-FNAF/API)<br>
+[DLCs / Fan Games](https://the-fnaf-fan-game.fandom.com/wiki/List_of_Fan_Games)<br>
+[DLCs / Fan Games Creator](https://gamejolt.com/get/build?game=691867&build=1543724)<br>
+[DLCs / Fan Discord](https://discord.com/invite/fnafreddys)<br>
+[DLCs / Fan Instagram](https://www.instagram.com/scottcawthon87/?hl=en)<br>
+[DLCs / Fan X](https://x.com/fnaf_scottgames?lang=en)<br>
+[DLCs / Fan Facebook](https://www.facebook.com/groups/297465133923413/)<br>
+[DLCs / Fan Retexture P](https://www.patreon.com/posts/fnaf-1-retexture-134574725)<br>
+[DLCs / Fan CAK P](https://www.patreon.com/posts/fnaf-1-crew-as-92774898)<br>
+[DLCs / Fan FNAF P](https://www.patreon.com/posts/five-nights-at-116641538)<br>
+[DLCs / FNAF Legacy](https://larsthecat.github.io/New-FNAF/Legacy.html)<br>
+[DLCs / FNAF Legacy 2](https://larsthecat.github.io/New-FNAF/Legacy-2.html)<br>
 [Info](https://larsthecat.github.io/New-FNAF/info)<br>
 
 
