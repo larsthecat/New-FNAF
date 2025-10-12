@@ -73,6 +73,7 @@ Help Wanted 2 (2023): The sequel to Help Wanted, it also takes place in virtual 
 [DLCs Specials](https://larsthecat.github.io/New-FNAF/DLCs-Specials)<br>
 [DLCs / Mods](https://larsthecat.github.io/New-FNAF/Mods)<br>
 [DLCs / Pro](https://larsthecat.github.io/New-FNAF/Pro)<br>
+[DLCs / API](https://larsthecat.github.io/New-FNAF/API)<br>
 [Info](https://larsthecat.github.io/New-FNAF/info)<br>
 
 
