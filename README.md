@@ -1,4 +1,3 @@
-![Logo]([https://static.wikia.nocookie.net/one-night-at-flumptys/images/0/0c/FNaF-Logo-Official.webp/revision/latest?cb=20220610021902])
 # Five Night's at Freddys NEW
  Containing every possible fnaf game in web browser.<br>
  Listing Fnaf; 1, 2, 3, 4, World, Sister Location, Pizzeria Simulator, and Ultimate Custom Night!<br>
