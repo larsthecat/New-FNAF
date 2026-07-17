@@ -89,6 +89,7 @@ Help Wanted 2 (2023): The sequel to Help Wanted, it also takes place in virtual 
 [DLCs / Buy FNAF](https://larsthecat.github.io/New-FNAF/Buy-Fnaf)<br>
 [DLCs / Animatronics](https://larsthecat.github.io/New-FNAF/animatronics/all)<br>
 [Info](https://larsthecat.github.io/New-FNAF/info)<br>
+[Page Deployments](https://larsthecat.github.io/New-FNAF/info)<br>
 
 <link rel="icon" type="image/png" href="https://i.ibb.co/1fXSKk1W/Five-Nights-at-Freddy-s-svg.png">
 
